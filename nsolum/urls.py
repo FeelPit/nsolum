@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from nsolum import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('welcome_page', views.welcome_page)
 ]
