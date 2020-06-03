@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0ed658fb53.js" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+	@font-face{
+		font-family: Montserrat-MediumItalic;
+		src: url({% static 'Montserrat/Montserrat-MediumItalic.otf' %});
+	}
+    html,body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-image: radial-gradient( circle farthest-corner at -4% -12.9%,  rgba(74,98,110,1) 0.3%, rgba(30,33,48,1) 90.2% );
+    }
+    .common{
+        height: 76%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch baseline;
+    }
+    .tittle{
+        height: 12%;
+    }
+    .tit{
+        font-size: 25px;
+    }
+    .users{
+        order: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .tab{
+        order: 1;
+        align-self: center;
+        background-color: #ffffffdc;
+        height: 300px;
+        width: 350px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .context{
+        order: 1;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center space-between;
+        align-content: center space-between;
+    }
+    .lower{
+        display: flex;
+        background-color: rgba(30,33,48,1);
+        height: 12%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+</style>
+<body>
+    <div class="tittle"><span class="tit" style="margin-left: 15px;">n</span><span class="tit"  style="color: #bb00ffdc;">S</span><span class="tit"  style="color: #fff700dc;">o</span><span class="tit" >lum</span></div>
+	<div class="common">
+        <div class="users">
+            <div class="tab shadow-lg">
+                <div class="context">
+                    <form>
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="Имя">
+                          </div>
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="Фамилия">
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>		
+    </div>
+    <div class="lower">
+        <div style="order: 1;"><p style="color: whitesmoke; margin-top: 10px;">Powered by Artyom Zinkovets.</p></div>
+        <div style="order: 2;"><p style="color: whitesmoke; margin-bottom: 10px;">n<span style="color:#bb00ffdc;">S</span><span style="color:#fff700dc;">o</span>lum</p></div>
+     </div>
+</body>
+</html>
