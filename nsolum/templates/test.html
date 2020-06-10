@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/flagicon.css' %}" >
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+		<script src="http://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="http://bootstraptema.ru/plugins/2016/shieldui/script.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	</head>
+	<style>
+		html,body{
+			height: auto;
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+		}
+		#exit{
+			text-decoration: none;
+		}
+		#main{
+			display: flex;
+			flex-direction: column;
+			height: auto;
+			width: 100%;
+			padding-top: 5%;
+			padding-right: 0;
+			padding-left: 0;
+		}
+		.btn-circle{
+			width: 50px;
+    		height: 50px;
+    		border-radius: 25px;
+    		text-align: center;
+    		padding-left: 0;
+    		padding-right: 0;
+    		font-size: 16px;
+		}
+		#little{
+			display: flex;
+			flex-direction: column;
+			margin-top: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+			height: 300px;
+			width: 300px;
+		}
+		#down{
+			order: 1;
+			flex-grow: 1;
+			margin-left: 15px;
+			margin-top: 50px; 
+			margin-bottom: 15px;
+			margin-right: 15px;
+			height: 200px;
+		}
+		#legend{
+			margin-left: 15px;
+
+		}
+	</style>
+	<body class="bg-light">
+		<nav class="navbar navbar-expand-lg navbar-expand-sm fixed-top navbar-dark bg-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+		    </button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<a class="navbar-brand" href="#"><i class="fab fa-pagelines text-success"></i> TM</a>
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">	
+					<li class="nav-item">
+						<a class="nav-link" href="http://127.0.0.1:8090/main"><span>Trees</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">QR</a>
+					</li>					
+				</ul>
+				<button type="button" class="btn btn-outline-success">
+					<a href="https://vk.com" id="exit" class='text-light'>
+						Exit
+					</a>
+				</button>
+			</div>
+		</nav>
+		<div class="container-fluid bg-light" id="main">
+			<div style="order:2; flex-grow: 5; display: flex; flex-direction: column;">		
+				<div style="order: 1; flex-grow: 3">
+					<ul class="nav nav-pills mb-3 justify-content-end" id="pills-tab" role="tablist" style="margin-right: 15px">
+					  <li class="nav-item bg-succes">
+					    <a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Catalog</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Map</a>
+					  </li>
+					</ul>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" style="height: 50%; width: 100%; position: relative;">
+							<div class="cont border shadow rounded" style="height: 900px;">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1444.3748597003344!2d3.8848904!3d43.61175252829206!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sfr!4v1549470905883" frameborder="0" style="border:0;  width:100%; height:100%" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">										
+							<div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+								{% for i in trees %}
+									<div class="cont border shadow rounded" id="little" style="height: 350px">
+										<div style="height: 240px; width: 100%">
+											<img style="height: 240px; width: 100%" src="../static/images/{{i.photo}}">
+										</div>
+										<div style="padding-left: 20px">
+											<span style="font-size: 30px"> <i class="fas fa-{{i.type}} text-success"></i> <strong>{{i.name}}</strong></span>
+										</div>
+										<div style="height: 30px">
+											<form method="GET" action="#" style="padding-left: 20px; margin-top: 10px">
+												<button type="submit" class="btn btn-outline-success"> Regarder </button>
+											</form>
+										</div>
+									</div>					
+								{% endfor %}
+							</div>
+						</div>	
+					</div>	
+				</div>	
+				<div style="order: 2; flex-grow: 2; margin-right: 85px">
+					<div class="bg-dark shadow border border-success rounded" id="down" style="width: 100%; height: 40px; display: flex; flex-direction: row; margin-right: 100px;">
+						<p id="legend"><i style="font-size: 25px;" class="fas fa-leaf text-success"></i> - <span style="font-size: 25px" class="text-light"> Feuillu </span></p>
+						<p id="legend"><i style="font-size: 25px;" class="fas fa-tree text-success"></i> - <span style="font-size: 25px" class="text-light"> Pinophyta </span></p>
+					</div>
+				</div>		
+			</div>
+			<div class="fixed-bottom" style="order:4; flex-grow: 1;">
+				<div style="height: 100%; width:100%;display: flex; flex-direction: row-reverse;">
+					<div style="order: 1; flex-grow: 1; text-align: right;">
+						<form method="GET" action="#" style="padding-right: 15px; padding-bottom: 20px;">
+							<button type="submit" class="btn btn-circle btn-success">
+								<i style="font-size: 25px" class="fas fa-plus"></i>
+							</button>
+						</form>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var options = {
+	        	center: new google.maps.LatLng(48.1, -4.21),
+	        	zoom: 14,
+	        	mapTypeId: google.maps.MapTypeId.ROADMAP
+	    	};
+	        
+	    	var map = new google.maps.Map(document.getElementById("map"), options);
+	    
+	    	var marker = new google.maps.Marker({
+	        	position: new google.maps.LatLng(48.0977, -4.212),
+	        	map: map,
+	        	title: "Locronan - Rue du Prieuré",
+	        	icon: new google.maps.MarkerImage('icon.png')
+	    	});
+		</script>
+	</body>
+</html>		

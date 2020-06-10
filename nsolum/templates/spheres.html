@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0ed658fb53.js" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+	@font-face{
+		font-family: Montserrat-MediumItalic;
+		src: url({% static 'Montserrat/Montserrat-MediumItalic.otf' %});
+	}
+    html,body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-image: radial-gradient( circle farthest-corner at -4% -12.9%,  rgba(74,98,110,1) 0.3%, rgba(30,33,48,1) 90.2% );;
+    }
+    .common{
+        height: 86%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch baseline;
+    }
+    .fst_col{
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 15px 15px 15px;
+        height: 100%;
+        width: 20%;
+    }
+    .profile{
+        order: 1;
+        height: 200px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+    .lenta{
+        order: 2;
+        height: 350px;
+        width: 250px;
+        background-color: yellowgreen;
+        margin-top: 15px;
+        border-radius: 10px;
+    }
+    .sec_col{
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0px 15px 15px 15px;
+        height: 100%;
+        width: 100%;
+    }
+    .sphere{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;        
+    }
+    .col{
+        order:1;
+        width: 25%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .item{
+        order: 1;
+        height: 200px;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        color: whitesmoke;
+    }
+    .icon{
+        order: 1; 
+        height: 50%;
+    }
+    .text_icon{
+        order: 2;
+        height: 10%;
+        font-size: 20px;
+    }
+    .button_icon{
+        order: 3;
+        height: 10%;
+    }
+    .thd_col{
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 15px 15px 15px;
+        height: 100%;
+        width: 20%;
+    }
+    .tittle{
+        height: 8%;
+    }
+    .tit{
+        font-size: 25px;
+    }
+    .lower{
+        display: flex;
+        background-color: rgba(30,33,48,1);
+        height: 14%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .fst_line{
+        order: 1;
+        display: flex;
+        flex-direction: row;
+    }
+    .scd_line{
+        order: 2;
+    }
+    .thd_line{
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+
+    }
+</style>
+<body>
+    <div>
+		<nav class="navbar navbar-expand-lg navbar-expand-sm fixed-top navbar-dark bg-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+		    </button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<a class="navbar-brand" href="#"><i class="fab fa-pagelines text-success"></i> TM</a>
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">	
+					<li class="nav-item">
+						<a class="nav-link" href="http://127.0.0.1:8090/main"><span>Trees</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">QR</a>
+					</li>					
+				</ul>
+				<button type="button" class="btn btn-outline-success">
+					<a href="https://vk.com" id="exit" class='text-light'>
+						Exit
+					</a>
+				</button>
+			</div>
+		</nav>
+    </div>
+    <div class="common">
+        <div class="sec_col">
+            <div class="sphere">
+                <div class="col">
+                    <div class="bg-dark item shadow-lg" style="border: 2px solid yellowgreen;">
+                        <div class="icon"> <i class="far fa-heart" style="font-size: 80px; color: yellowgreen;"></i> </div>
+                        <div class="text_icon"> <a> Знакомства </a> </div>
+                        <div class="button_icon"><button style="margin-top: 15px;" type="button" onclick="red()" class="btn btn-outline-success">Перейти</button> <button style="margin-left: 10px; margin-top: 15px;" type="button" class="btn btn-outline-danger">Что это?</button></div>
+                    </div>
+                    <div class="bg-dark item" style="border: 2px solid red;">
+                        <div class="icon"> <i class="far fa-flag" style="font-size: 80px; color: red;"></i> </div>
+                        <div class="text_icon"> <a> Язык </a> </div>
+                        <div class="button_icon"><button style="margin-top: 15px;" type="button" onclick="red()" class="btn btn-outline-success" disabled>Перейти</button> <button style="margin-left: 10px; margin-top: 15px;" type="button" class="btn btn-outline-danger" disabled>Что это?</button> </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-dark item" style="border: 2px solid #5e1ed6;">
+                        <div class="icon"> <i class="fas fa-passport" style="font-size: 80px; color: #5e1ed6;"></i> </div>
+                        <div class="text_icon"> <a> Документы </a> </div>
+                        <div class="button_icon"><button style="margin-top: 15px;" type="button" onclick="red()" class="btn btn-outline-success" disabled>Перейти</button> <button style="margin-left: 10px; margin-top: 15px;" type="button" class="btn btn-outline-danger" disabled>Что это?</button> </div>
+                    </div>
+                    <div class="bg-dark item" style="border: 2px solid #1e89d6;">
+                        <div class="icon"> <i class="fas fa-university" style="font-size: 80px; color: #1e89d6;"></i> </div>
+                        <div class="text_icon"> <a> Университет </a> </div>
+                        <div class="button_icon"><button style="margin-top: 15px;" type="button" onclick="red()" class="btn btn-outline-success" disabled>Перейти</button> <button style="margin-left: 10px; margin-top: 15px;" type="button" class="btn btn-outline-danger" disabled>Что это?</button> </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-dark item" style="border: 2px solid #eba009;">
+                        <div class="icon"> <i class="fas fa-school" style="font-size: 80px; color: #eba009;"></i> </div>
+                        <div class="text_icon"> <a> Школа/Садик </a> </div>
+                        <div class="button_icon"><button style="margin-top: 15px;" type="button" onclick="red()" class="btn btn-outline-success" disabled>Перейти</button> <button style="margin-left: 10px; margin-top: 15px;" type="button" class="btn btn-outline-danger" disabled>Что это?</button> </div>
+                    </div>
+                    <div class="bg-dark item" style="border: 2px solid #eb09c5;">
+                        <div class="icon"> <i class="fas fa-magnet" style="font-size: 80px; color: #eb09c5;"></i> </div>
+                        <div class="text_icon"> <a> Ассоциации </a> </div>
+                        <div class="button_icon"><button style="margin-top: 15px;" type="button" onclick="red()" class="btn btn-outline-success" disabled>Перейти</button> <button style="margin-left: 10px; margin-top: 15px;" type="button" class="btn btn-outline-danger" disabled>Что это?</button> </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-dark item col-sm-auto  col-xs-auto" style="border: 2px solid #080708;">
+                        <div class="icon"> <i class="fas fa-home" style="font-size: 80px; color: #080708;"></i> </div>
+                        <div class="text_icon"> <a> Жилье </a> </div>
+                        <div class="button_icon"><button style="margin-top: 15px;" type="button" onclick="red()" class="btn btn-outline-success" disabled>Перейти</button> <button style="margin-left: 10px; margin-top: 15px;" type="button" class="btn btn-outline-danger" disabled>Что это?</button> </div>
+                    </div>
+                    <div class="bg-dark item col-lg-auto" style="border: 2px solid #15eded;">
+                        <div class="icon"> <i class="fas fa-briefcase" style="font-size: 80px; color: #15eded;"></i> </div>
+                        <div class="text_icon"> <a> Работа </a> </div>
+                        <div class="button_icon"><button style="margin-top: 15px;" type="button" onclick="red()" class="btn btn-outline-success" disabled>Перейти</button> <button style="margin-left: 10px; margin-top: 15px;" type="button" class="btn btn-outline-danger" disabled>Что это?</button> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lower">
+        <div style="order: 1;"><p style="color: whitesmoke; margin-top: 10px;">Powered by Artyom Zinkovets.</p></div>
+        <div style="order: 2;"><p style="color: whitesmoke; margin-bottom: 10px;">n<span style="color:#bb00ffdc;">S</span><span style="color:#fff700dc;">o</span>lum</p></div>
+     </div>
+</body>
+</html>
