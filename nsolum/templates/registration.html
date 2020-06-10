@@ -94,6 +94,11 @@
         border-radius: 25px;
     }
 </style>
+<script>
+    function login(){
+        document.location.replace('http://0.0.0.0:8080/login')
+    }
+</script>
 <body>
     <div class="tittle"><span class="tit" style="margin-left: 15px;">n</span><span class="tit"  style="color: #bb00ffdc;">S</span><span class="tit"  style="color: #fff700dc;">o</span><span class="tit" >lum</span></div>
 	<div class="common">
@@ -154,9 +159,12 @@
                                     <i class="fab fa-facebook-square" style="font-size: 40px; color: #057aff;"></i>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-outline-success">Отправить</button>
+                            <div class="row" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <div style="order: 1;">
+                                    <button type="submit" class="btn btn-outline-success">Присоединиться</button>
+                                </div>
+                                <div style="order: 3; margin-top: 5px;">
+                                    <button type="button" onclick="login()" class="btn btn-outline-warning">Войти</button>
                                 </div>
                             </div>
                         </form>

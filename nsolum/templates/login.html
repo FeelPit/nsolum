@@ -94,6 +94,11 @@
         border-radius: 25px;
     }
 </style>
+<script>
+    function registration(){
+        document.location.replace('http://0.0.0.0:8080/registration')
+    }
+</script>
 <body>
     <div class="tittle"><span class="tit" style="margin-left: 15px;">n</span><span class="tit"  style="color: #bb00ffdc;">S</span><span class="tit"  style="color: #fff700dc;">o</span><span class="tit" >lum</span></div>
 	<div class="common">
@@ -113,11 +118,14 @@
                                     <input type="password" id="password" name="password" class="form-control" placeholder="Пароль">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
+                            <div class="row" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <div style="order: 1;">
                                     <button type="submit" class="btn btn-outline-success">Войти</button>
                                 </div>
-                            </div>  
+                                <div style="order: 2; margin-top: 5px;">
+                                    <button type="button" onclick="registration()" class="btn btn-outline-warning">Регистрация</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
