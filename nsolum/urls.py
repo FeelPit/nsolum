@@ -20,5 +20,9 @@ from nsolum import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('welcome_page/', views.welcome_page),
-    path('registration/', views.registration)
+    path('registration/', views.registration),
+    path('login/', views.login),
+    path('test/', views.test),
+    path('spheres/', views.spheres),
+    path('spheres/znakomstva', views.znakomstva),
 ]

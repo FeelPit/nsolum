@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 <head>
-    <title>W3.CSS Template</title>
+    <title> W3.CSS Template</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -52,8 +52,8 @@
         order: 1;
         align-self: center;
         background-color: #ffffffdc;
-        height: 300px;
-        width: 350px;
+        height: 500px;
+        width: 400px;
         border-radius: 25px;
         display: flex;
         flex-direction: column;
@@ -68,6 +68,8 @@
         align-items: center;
         justify-content: center space-between;
         align-content: center space-between;
+        height: 100%;
+        margin-top: 10px;
     }
     .lower{
         display: flex;
@@ -77,6 +79,20 @@
         justify-content: center;
         flex-direction: column;
     }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center space-between;
+        align-items: center;
+        margin: 10px 15px 0 15px;
+    }
+    .row{
+        order: 1;
+        padding-bottom: 20px;
+    }
+    .form-control{
+        border-radius: 25px;
+    }
 </style>
 <body>
     <div class="tittle"><span class="tit" style="margin-left: 15px;">n</span><span class="tit"  style="color: #bb00ffdc;">S</span><span class="tit"  style="color: #fff700dc;">o</span><span class="tit" >lum</span></div>
@@ -84,16 +100,66 @@
         <div class="users">
             <div class="tab shadow-lg">
                 <div class="context">
-                    <form>
-                        <div class="row">
-                          <div class="col">
-                            <input type="text" class="form-control" placeholder="Имя">
-                          </div>
-                          <div class="col">
-                            <input type="text" class="form-control" placeholder="Фамилия">
-                          </div>
-                        </div>
-                      </form>
+                    <div style="font-size: 20px;"><a style="color: #bb00ffdc;">S</a><a style="color: #fff700dc;">o</a></div>
+                        <form method="post" role="form" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="row">
+                            <div class="col">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Имя">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="surname" name="surname" class="form-control" placeholder="Фамилия">
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Пароль">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="inputState">Ваш родной язык?</label>
+                                    <select id="lang" name="lang" class="form-control">
+                                    <option selected>Русский</option>
+                                    <option disabled>Скоро добавим еще</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputState">Откуда вы?</label>
+                                    <select id="city" name="city" class="form-control">
+                                    <option selected>Монпелье</option>
+                                    <option disabled>Скоро добавим еще</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="inputDate">Когда вы родились?</label>
+                                        <input type="date" id="birthday" name="birthday" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <i class="fab fa-vk" style="font-size: 40px; color: #0597ff;"></i>
+                                </div>
+                                <div class="col">
+                                    <i class="fab fa-instagram" style="font-size: 40px; color: #ffb805;"></i>
+                                </div>
+                                <div class="col">
+                                    <i class="fab fa-facebook-square" style="font-size: 40px; color: #057aff;"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-outline-success">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>		
@@ -101,6 +167,6 @@
     <div class="lower">
         <div style="order: 1;"><p style="color: whitesmoke; margin-top: 10px;">Powered by Artyom Zinkovets.</p></div>
         <div style="order: 2;"><p style="color: whitesmoke; margin-bottom: 10px;">n<span style="color:#bb00ffdc;">S</span><span style="color:#fff700dc;">o</span>lum</p></div>
-     </div>
+    </div>
 </body>
 </html>
