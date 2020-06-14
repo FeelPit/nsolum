@@ -25,4 +25,7 @@ urlpatterns = [
     path('test/', views.test),
     path('spheres/', views.spheres),
     path('spheres/znakomstva', views.znakomstva),
+    path(r'api/<int:idha>/<int:from_years>/<int:to_years>/<int:pp>', views.api_search_meets),
+    path(r'api/<int:from_years>/<int:to_years>/<int:rad>', views.api_test),
+    path(r'api/user_id', views.api_user_id)
 ]
